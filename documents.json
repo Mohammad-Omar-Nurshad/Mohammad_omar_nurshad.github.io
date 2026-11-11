@@ -1,0 +1,173 @@
+{
+ "updated": "2026-11-11",
+ "documents": [
+  {
+   "id": "bsc-transcript",
+   "title": "BSc Academic Transcript",
+   "category": "Undergraduate Credentials",
+   "institution": "University of Chittagong",
+   "date": "8 Sep 2025",
+   "description": "Year-wise academic record, B.Sc. (Honours) in Statistics, CGPA 3.59/4.00, 160 credits. Identification numbers and parents’ names are redacted.",
+   "file": "documents/academic/BSc_Transcript.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "bsc-certificate",
+   "title": "BSc Provisional Certificate",
+   "category": "Undergraduate Credentials",
+   "institution": "University of Chittagong",
+   "date": "13 Jan 2026",
+   "description": "Provisional certificate, B.Sc. (Honours) in Statistics; examination of 2023, held Feb–May 2025. Identification numbers and parents’ names are redacted.",
+   "file": "documents/academic/BSc_Certificate.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "msc-certificate",
+   "title": "MSc Provisional Certificate",
+   "category": "Postgraduate Credentials",
+   "institution": "University of Chittagong",
+   "date": "4 Nov 2026",
+   "description": "Provisional certificate, M.S. in Statistics (Thesis Group), GPA 3.25/4.00; held May–Jul 2026. Identification numbers and parents’ names are redacted.",
+   "file": "documents/academic/MSc_Certificate.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "moi",
+   "title": "Medium of Instruction Certificate",
+   "category": "English & Evaluation",
+   "institution": "Registrar Office, University of Chittagong",
+   "date": "19 Jan 2026",
+   "description": "Confirms English as the medium of instruction in the Department of Statistics. Identification numbers and parents’ names are redacted.",
+   "file": "documents/academic/Medium_of_Instruction.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "hsc",
+   "title": "HSC Certificate and Transcript",
+   "category": "Secondary Education",
+   "institution": "Board of Intermediate and Secondary Education, Chattogram",
+   "date": "17 Jul 2019",
+   "description": "Higher Secondary Certificate 2019, Science, GPA 4.00/5.00. Identifiers and parents’ names are redacted.",
+   "file": "documents/academic/HSC.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "ssc",
+   "title": "SSC Certificate and Transcript",
+   "category": "Secondary Education",
+   "institution": "Board of Intermediate and Secondary Education, Chittagong",
+   "date": "4 May 2017",
+   "description": "Secondary School Certificate 2017, Science, GPA 5.00/5.00. Identifiers and parents’ names are redacted.",
+   "file": "documents/academic/SSC.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "scholaro",
+   "title": "Scholaro Credential Evaluation",
+   "category": "English & Evaluation",
+   "institution": "Scholaro",
+   "date": "26 Oct 2026",
+   "description": "Independent evaluation: 160 credits, converted GPA 3.689. Does not replace the official CGPA.",
+   "file": "documents/academic/Scholaro_GPA_Evaluation.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "pending"
+  },
+  {
+   "id": "thesis",
+   "title": "MSc Dengue Thesis",
+   "category": "Research Documents",
+   "institution": "University of Chittagong",
+   "date": "Sep 2026",
+   "description": "Modeling and Predicting Daily Dengue Cases in Bangladesh Using Meteorological Factors.",
+   "file": "documents/research/MSc_Dengue_Thesis.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "pending"
+  },
+  {
+   "id": "thesis-abstract",
+   "title": "MSc Thesis Abstract",
+   "category": "Research Documents",
+   "institution": "University of Chittagong",
+   "date": "Sep 2026",
+   "description": "Two-page abstract of the dengue forecasting thesis. The full thesis PDF is listed separately.",
+   "file": "documents/research/Master_Thesis_Abstract.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "cuss-cert",
+   "title": "CUSS Participation Certificate",
+   "category": "Conference",
+   "institution": "Chittagong University Scientific Society",
+   "date": "31 Jan 2026",
+   "description": "Author, Life and Health Science theme, Scholars’ Convergence: Research & Innovation Summit 2026.",
+   "file": "documents/conference/CUSS_Participation_Certificate.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "cuss-poster",
+   "title": "Research Poster (as presented)",
+   "category": "Conference",
+   "institution": "Chittagong University Scientific Society",
+   "date": "31 Jan 2026",
+   "description": "Photograph of the poster displayed at the summit (Participant ID PLHS13); preliminary results. University email address redacted. Final results are in the preprint.",
+   "file": "documents/conference/Original_Research_Poster.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "hdnb",
+   "title": "Data Analytics Career Bootcamp",
+   "category": "Training & Professional Development",
+   "institution": "Human Development Network Bangladesh",
+   "date": "Completed 3 Dec 2025",
+   "description": "16-week bootcamp, total marks 76/100.",
+   "file": "documents/training/HDNB_Data_Analytics_Bootcamp.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "ro-dds",
+   "title": "Data and Decision Science (ResearchOrbit)",
+   "category": "Training & Professional Development",
+   "institution": "ResearchOrbit",
+   "date": "27 Sep 2025",
+   "description": "Online course: Higher Studies, Perspectives, Careers, and Research Avenues.",
+   "file": "documents/training/ResearchOrbit_Data_Decision_Science.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  },
+  {
+   "id": "ro-st",
+   "title": "Introduction to Statistical Thinking (ResearchOrbit)",
+   "category": "Training & Professional Development",
+   "institution": "ResearchOrbit",
+   "date": "3 Oct 2025",
+   "description": "Online course: Statistical Thinking for Non-Statistical Audiences.",
+   "file": "documents/training/ResearchOrbit_Statistical_Thinking.pdf",
+   "type": "PDF",
+   "visibility": "public",
+   "status": "available"
+  }
+ ]
+}

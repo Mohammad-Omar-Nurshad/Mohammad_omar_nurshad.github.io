@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://mohammad-omar-nurshad.github.io/Mohammad_omar_nurshad.github.io/sitemap.xml

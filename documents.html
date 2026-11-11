@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Academic Credentials &amp; Verified Documents | Mohammad Omar Nurshad</title>
+<meta name="description" content="Verified academic documents of Mohammad Omar Nurshad, Statistics graduate, University of Chittagong.">
+<link rel="canonical" href="https://mohammad-omar-nurshad.github.io/Mohammad_omar_nurshad.github.io/documents.html">
+<style>
+:root{--bg:#fbfcfd;--fg:#14202e;--mut:#51606f;--navy:#0b2545;--teal:#0f6b6b;--line:#d8e0e6;--card:#fff;--soft:#eef4f5}
+@media(prefers-color-scheme:dark){:root{--bg:#0d1620;--fg:#e6edf3;--mut:#a9b8c6;--navy:#9cc2ff;--teal:#6cc7c7;--line:#243445;--card:#132130;--soft:#17293a}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 system-ui,-apple-system,"Segoe UI",sans-serif}
+main{max-width:960px;margin:0 auto;padding:24px 16px 56px}
+a{color:var(--teal)}h1{color:var(--navy);font-size:1.7rem;margin:.4rem 0}
+.mut{color:var(--mut)}.bar{display:flex;gap:8px;flex-wrap:wrap;margin:18px 0}
+input{flex:1 1 220px;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--fg);font:inherit}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:18px}
+.chips button{border:1px solid var(--line);background:var(--card);color:var(--fg);border-radius:99px;padding:6px 12px;font:inherit;font-size:.88rem;cursor:pointer}
+.chips button[aria-pressed=true]{background:var(--navy);color:var(--bg);border-color:var(--navy)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;display:flex;flex-direction:column;gap:6px}
+.card h2{font-size:1.02rem;margin:0;color:var(--navy)}.tag{font-size:.75rem;color:var(--teal);text-transform:uppercase;letter-spacing:.04em}
+.meta{font-size:.85rem;color:var(--mut)}.file{font-size:.8rem;color:var(--mut);word-break:break-all}
+.act{display:flex;gap:8px;margin-top:auto;padding-top:8px}
+.btn{padding:8px 14px;border-radius:8px;border:1px solid var(--teal);text-decoration:none;font-size:.9rem}
+.btn.p{background:var(--teal);color:var(--bg)}.note{background:var(--soft);border-radius:8px;padding:8px 10px;font-size:.85rem;color:var(--mut)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid var(--teal);outline-offset:2px}
+</style></head><body><main>
+<p><a href="index.html">← Back to portfolio</a></p>
+<h1>Academic Credentials &amp; Verified Documents</h1>
+<p class="mut">Documents are published here only after review and, where needed, removal of identification numbers and signatures. <span id="count"></span></p>
+<div class="bar"><input id="q" type="search" placeholder="Search documents" aria-label="Search documents"></div>
+<div class="chips" id="chips" role="group" aria-label="Filter by category"></div>
+<div class="grid" id="grid" aria-live="polite"></div>
+</main>
+<script>
+const $=s=>document.querySelector(s);let docs=[],cat='All';
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+function draw(){
+  const t=$('#q').value.toLowerCase();
+  const list=docs.filter(d=>(cat==='All'||d.category===cat)&&(d.title+d.institution+d.description).toLowerCase().includes(t));
+  $('#grid').innerHTML=list.map(d=>{
+    const ok=d.status==='available';
+    const acts=ok?`<div class="act"><a class="btn p" href="${esc(d.file)}" target="_blank" rel="noopener" aria-label="View PDF: ${esc(d.title)}">View PDF</a><a class="btn" href="${esc(d.file)}" download aria-label="Download PDF: ${esc(d.title)}">Download</a></div>`
+      :`<div class="note">${d.status==='missing'?'File not found on the server.':'Public copy not yet published.'}</div>`;
+    return `<article class="card"><span class="tag">${esc(d.category)}</span><h2>${esc(d.title)}</h2><div class="meta">${esc(d.institution)} · ${esc(d.date)}</div><p style="margin:.2rem 0">${esc(d.description)}</p><div class="file">${esc(d.file.split('/').pop())}</div>${acts}</article>`}).join('')||'<p class="mut">No documents match.</p>';
+}
+function chips(){
+  const cats=['All',...new Set(docs.map(d=>d.category))];
+  $('#chips').innerHTML=cats.map(c=>`<button aria-pressed="${c===cat}" data-c="${esc(c)}">${esc(c)}</button>`).join('');
+  document.querySelectorAll('#chips button').forEach(b=>b.onclick=()=>{cat=b.dataset.c;chips();draw()});
+}
+fetch('documents.json').then(r=>r.json()).then(async j=>{
+  docs=j.documents;
+  await Promise.all(docs.filter(d=>d.status==='available').map(async d=>{
+    try{const r=await fetch(d.file,{method:'HEAD'});if(!r.ok)d.status='missing'}catch(e){}}));
+  const n=docs.filter(d=>d.status==='available').length;
+  $('#count').textContent=n+' of '+docs.length+' listed documents are currently available.';
+  chips();draw();$('#q').addEventListener('input',draw);
+}).catch(()=>{$('#grid').innerHTML='<p class="mut">The document list could not be loaded.</p>'});
+</script></body></html>
